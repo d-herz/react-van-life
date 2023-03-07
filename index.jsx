@@ -1,5 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
 
 /**
@@ -20,7 +22,35 @@ import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
 
 function App() {
   return (
-    <h1>Start here</h1>
+    <>
+    <BrowserRouter>
+      <nav>
+        <Link to='/'>Home</Link>
+        <Link to='/about'>About</Link>
+        {/* <Link to='/vans'>Vans</Link> */}
+      </nav>
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/about' element={<About />} />
+        {/* <Route path='/vans' element={<Vans />} /> */}
+      </Routes>
+    </BrowserRouter>
+    <Footer />
+    </>
+  )
+}
+function Home() {
+  return (
+    <div>
+      <h1>You got the travel plans, we got the travel vans.</h1>
+      <h2> Add adventure to your life by joining the #vanlife movement. Rent the perfect van to make your perfect road trip.</h2>
+      <button>Find your van</button>
+    </div>
+  )
+}
+function About() {
+  return (
+    <h1>About Van Life</h1>
   )
 }
 
