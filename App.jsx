@@ -12,21 +12,6 @@ import Footer from './components/Footer';
 
 
 export default function App() {
-  // State Array for incoming Vans data
-  const [vans, setVans]  = React.useState([])
-
-  // Fetch to "api" relative path because same domain
-  React.useEffect(()=> {
-    async function getVans() {
-      const res = await fetch(`/api/vans`);
-
-      const data = await res.json()
-
-      setVans(data)
-    }
-    getVans()
-    console.log(vans)
-  }, [])
 
   return (
     <BrowserRouter>
@@ -42,7 +27,7 @@ export default function App() {
         <Route path='/about' element={<About />} />
         <Route path='/vans' element={
           <Vans
-            vans={vans}
+
           />
         }/>
       </Routes>
