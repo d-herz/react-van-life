@@ -41,7 +41,6 @@ function Vans(props) {
           <i className={`van-type ${van.type} selected`}>{van.type}</i>
         </Link>
       </div>
-      
     )
   })
 
