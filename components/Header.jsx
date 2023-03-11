@@ -5,7 +5,7 @@ import { Link, NavLink } from 'react-router-dom'
 function Header(props) {
   const activeStyle = {
     fontWeight: "bold",
-    textDecoration: "underlined",
+    textDecoration: "underline",
     color: "#161616"
   }
 
@@ -15,21 +15,19 @@ function Header(props) {
       <nav>
         <NavLink
           to='/host'
-          style={ ({ isActive}) => isActive ? activeStyle : null }        
+          style={ ({isActive}) => isActive ? activeStyle : null }        
         >
           Host
         </NavLink>
-
         <NavLink
           to='/about'
-            style={ ({ isActive}) => isActive ? activeStyle : null }
+          style={ ({isActive}) => isActive ? activeStyle : null }
         >
           About
         </NavLink>
-    
         <NavLink
           to='/vans'
-          style={ ({ isActive}) => isActive ? activeStyle : null }
+          style={ ({isActive}) => isActive ? activeStyle : null }
         >
           Vans
         </NavLink>
