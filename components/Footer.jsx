@@ -3,7 +3,7 @@ import React from 'react'
 
 function Footer(props) {
   return (
-    <div> © 2022 #vanlife</div>
+    <footer>&#169; 2023 #VANLIFE</footer>
   )
 }
 
