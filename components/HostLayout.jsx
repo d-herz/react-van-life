@@ -1,7 +1,7 @@
 import React from 'react'
 import { NavLink, Outlet } from 'react-router-dom'
 
-function HostLayout(props) {
+function HostLayout() {
   const activeStyle = {
     fontWeight: "bold",
     textDecoration: "underline",

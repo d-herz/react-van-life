@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, NavLink } from 'react-router-dom'
 
 
-function Header(props) {
+function Header() {
   const activeStyle = {
     fontWeight: "bold",
     textDecoration: "underline",
