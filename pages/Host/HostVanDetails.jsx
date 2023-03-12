@@ -71,14 +71,10 @@ function HostVanDetails(props) {
         </nav>
         
         <Outlet
-          context={hostVanDetails.description}
+          context={{ hostVanDetails }}
         />
 
       </div>
-
-
-
-
     </section>
   )
 }
