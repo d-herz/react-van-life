@@ -28,9 +28,9 @@ export default function App() {
           <Route path='host' element={<HostLayout />} >
             <Route index element={<HostDashboard />} />
             <Route path='income' element={<Income />} />
+            <Route path='reviews' element={<Reviews />} />
             <Route path='vans' element={<HostVans />} />
             <Route path='vans/:id' element={<HostVanDetails />} />
-            <Route path='reviews' element={<Reviews />} />
           </Route>
 
         </Route>
