@@ -13,7 +13,7 @@ function Vans(props) {
       .then(data => setVans(data.vans))
 
   }, [])
-  console.log(vans)
+  // console.log(vans)
 
 
   const vansCard = vans.map( van => {
