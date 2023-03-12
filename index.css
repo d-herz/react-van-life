@@ -368,7 +368,7 @@ i[class*='van-type-'] {
   margin-block: 10px;
 }
 
-host-van-detail-layout-container {
+.host-van-detail-layout-container {
   background-color: white;
   padding: 24px;
   margin: 30px 26px;

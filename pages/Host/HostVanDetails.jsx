@@ -22,10 +22,11 @@ function HostVanDetails(props) {
   }
 
   return (
-    <div>
+    <section>
       
       <Link
-        to="../"
+        to=".."
+        relative="path"
         className="back-button"
       >
         &larr; <span>Back to all vans</span>
@@ -72,13 +73,13 @@ function HostVanDetails(props) {
           </nav>
 
           <Outlet/>
-          <p>{hostVanDetails.description}</p>
+          {/* <p>{hostVanDetails.description}</p> */}
 
         </div>
       ) : <h2>Loading...</h2>
       }
 
-    </div>
+    </section>
   )
 }
 
