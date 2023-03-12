@@ -7,9 +7,10 @@ function Layout(props) {
   return (
     <div className='site-wrapper'>
       <Header />
-      <Outlet />
+      <main>
+        <Outlet />
+      </main>
       <Footer />
-    
     </div>
   )
 }

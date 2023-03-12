@@ -19,6 +19,10 @@ function HostVanDetails(props) {
     textDecoration: "underline",
     color: "#161616"
   }
+
+  if (!hostVanDetails) {
+    return <h1>Loading...</h1>
+  }
  
   return (
     <section>
