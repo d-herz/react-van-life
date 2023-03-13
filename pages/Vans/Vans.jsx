@@ -40,6 +40,32 @@ function Vans(props) {
   return (
     <div className="van-list-container">
       <h1>Explore our van options</h1>
+      <div className="van-list-filter-buttons">
+        <button 
+          className='van-type simple' 
+          onClick={ () => setSearchParams({type: "simple"})}
+          >
+            Simple
+          </button>
+        <button 
+          className='van-type luxury' 
+          onClick={ () => setSearchParams({type: "luxury"})}
+          >
+            Luxury
+          </button>
+        <button 
+          className='van-type rugged' 
+          onClick={() => setSearchParams({type: "rugged"})}
+          >
+            Rugged
+          </button>
+        <button 
+          className='van-type clear-filters' 
+          onClick={() => setSearchParams({ })}
+          >
+            Clear filter
+          </button>
+      </div>
       <div className="van-list">
         {vansCard}
       </div>
