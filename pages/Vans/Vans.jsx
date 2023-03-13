@@ -42,19 +42,19 @@ function Vans(props) {
       <h1>Explore our van options</h1>
       <div className="van-list-filter-buttons">
         <button
-          className={`van-type simple ${typeFilter === "simple" ? 'selected' : null }`}
+          className={`van-type simple ${typeFilter === "simple" ? 'selected' : "" }`}
           onClick={() => setSearchParams({ type: "simple" })}
         >
           Simple
         </button>
         <button
-          className={`van-type luxury ${typeFilter === "luxury" ? 'selected' : null }`}
+          className={`van-type luxury ${typeFilter === "luxury" ? 'selected' : "" }`}
           onClick={() => setSearchParams({ type: "luxury" })}
         >
           Luxury
         </button>
         <button
-          className={`van-type rugged ${typeFilter === "rugged" ? 'selected' : null }`}
+          className={`van-type rugged ${typeFilter === "rugged" ? 'selected' : "" }`}
           onClick={() => setSearchParams({ type: "rugged" })}
         >
           Rugged
