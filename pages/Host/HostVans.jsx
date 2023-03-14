@@ -16,7 +16,7 @@ function HostVans(props) {
   const hostVansCard = hostVans.map(van => {
     return (
       <Link
-        to={`/host/vans/${van.id}`}
+        to={van.id}
         key={van.id}
         className="host-van-link-wrapper"
       >
