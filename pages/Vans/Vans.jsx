@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
+import { getVans } from "../../api"
 
 function Vans(props) {
   const [searchParams, setSearchParams] = useSearchParams()
@@ -11,10 +12,11 @@ function Vans(props) {
 
   // Fetch to "api" relative path because same domain
   React.useEffect(() => {
-    fetch("/api/vans")
-      .then(res => res.json())
-      .then(data => setVans(data.vans))
-
+    async function loadVans() {
+      const data = await getVans()
+      setVans(data)
+    }
+    loadVans()
   }, [])
   // console.log(vans)
 
