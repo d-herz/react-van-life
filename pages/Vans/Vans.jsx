@@ -1,39 +1,23 @@
 import React from 'react';
-import { Link, useSearchParams } from 'react-router-dom';
+import { Link, useSearchParams, useLoaderData } from 'react-router-dom';
 import { getVans } from "../../api"
 
 export function loader() {
-  return "Vans Data goes here"
+  return getVans()
 }
 
 function Vans(props) {
+  // Pulling in Data with loader function (instead of useEffect and fetch)
+  const vans = useLoaderData()
+  // console.log(data)
+
+  // For using the filters to display certain vans
   const [searchParams, setSearchParams] = useSearchParams()
-
-  const [loading, setLoading] = React.useState(false)
-  const [error, setError] = React.useState(null)
-
   const typeFilter = searchParams.get("type")
   // console.log(typeFilter)
 
-  // State Array for incoming Vans data
-  const [vans, setVans] = React.useState([])
-
-  // Fetch to "api" relative path because same domain
-  React.useEffect(() => {
-    async function loadVans() {
-      setLoading(true)
-      try {
-        const data = await getVans()
-        setVans(data)
-      } catch (err) {
-        setError(err)
-      } finally {
-        setLoading(false)
-      }
-    }
-    loadVans()
-  }, [])
-  // console.log(vans)
+  // Error states
+  const [error, setError] = React.useState(null)
 
   const displayedVans = typeFilter
     ? vans.filter(van => van.type === typeFilter)
@@ -60,6 +44,7 @@ function Vans(props) {
     )
   })
 
+  // Handler function for setting, deleting, or stacking query params:
   function handleFilterChange(key, value) {
     setSearchParams(prevParams => {
       if (value === null) {
@@ -71,9 +56,6 @@ function Vans(props) {
     })
   }
 
-  if (loading) {
-    return <h1>Loading...</h1>
-  }
   if (error) {
     return <h1>There was an error: {error.message}</h1>
   }
