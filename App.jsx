@@ -34,8 +34,8 @@ const router = createBrowserRouter(createRoutesFromElements(
     <Route
       path='vans'
       element={<Vans />}
-      loader={vansLoader}
       errorElement={<Error />}
+      loader={vansLoader}
     />
     <Route path='vans/:id' element={<VanDetail />} />
 
