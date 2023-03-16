@@ -1,26 +1,28 @@
 import "./server"
 import React from 'react';
-import ReactDOM from 'react-dom/client';
 import {
   RouterProvider,
   createBrowserRouter,
   createRoutesFromElements,
   Route,
 } from 'react-router-dom';
+
+import Layout from './components/Layout';
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Vans, { loader as vansLoader} from './pages/Vans/Vans';
 import VanDetail from './pages/Vans/VanDetail';
-import Layout from './components/Layout';
-import HostDashboard from './pages/Host/HostDashboard';
+
 import HostLayout from "./components/HostLayout";
+import HostDashboard from './pages/Host/HostDashboard';
 import Income from './pages/Host/Income';
+import Reviews from "./pages/Host/Reviews";
 import HostVans from "./pages/Host/HostVans";
 import HostVanDetails from "./pages/Host/HostVanDetails";
 import HostVanInfo from "./pages/Host/HostVanInfo";
 import HostVanPricing from "./pages/Host/HostVanPricing";
 import HostVanPhotos from "./pages/Host/HostVanPhotos";
-import Reviews from "./pages/Host/Reviews";
+
 import NotFound from "./pages/NotFound";
 
 
