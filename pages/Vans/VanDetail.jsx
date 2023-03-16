@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link, useParams, useLocation } from 'react-router-dom';
 
+// Adding loader function (dfh sidequest)
+
 function VanDetail(props) {
-  
   const params = useParams()
 
   const location = useLocation()
