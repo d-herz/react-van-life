@@ -5,7 +5,12 @@ function AuthRequired(props) {
   const auth = { token: null };
 
   if (!auth.token) {
-    return <Navigate to="/login" />
+    return (
+      <Navigate
+        to="/login"
+        state={{ message: "You must login first" }}
+      />
+    )
   }
 
   return <Outlet />
