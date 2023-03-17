@@ -7,7 +7,7 @@ import {
   Route,
 } from 'react-router-dom';
 
-import Login from "./pages/Login";
+import Login, { action as loginAction } from "./pages/Login";
 import Layout from './components/Layout';
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -36,6 +36,7 @@ const router = createBrowserRouter(createRoutesFromElements(
     <Route 
       path="login"
       element={<Login />}
+      action={loginAction}
     />
     <Route
       path='vans'
