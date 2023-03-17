@@ -12,9 +12,7 @@ function AuthRequired(props) {
       />
     )
   }
-
   return <Outlet />
-    
 }
 
 export default AuthRequired
