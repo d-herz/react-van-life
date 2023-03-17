@@ -17,6 +17,8 @@ export default function Login() {
   const location = useLocation()
   // console.log(location)
 
+  const navigate = useNavigate();
+
 
   function handleSubmit(e) {
     e.preventDefault()
@@ -27,6 +29,7 @@ export default function Login() {
     loginUser(loginFormData)
       .then(data => {
         console.log(data)
+        navigate("/host")
       })
       .catch(err => {
         setError(err)
