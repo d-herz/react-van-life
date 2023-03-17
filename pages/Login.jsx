@@ -21,9 +21,7 @@ export async function action({ request }) {
 
 export default function Login() {
  
-
   const [status, setStatus] = React.useState("idle")
-  // const [error, setError] = React.useState(null)
 
   const data = useActionData()
   const location = useLocation()
