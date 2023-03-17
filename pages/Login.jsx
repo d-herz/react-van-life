@@ -22,14 +22,13 @@ export default function Login() {
 
   function handleSubmit(e) {
     e.preventDefault()
-
     setStatus("submitting")
     setError(null) 
 
     loginUser(loginFormData)
       .then(data => {
-        console.log(data)
-        navigate("/host")
+        localStorage.setItem("loggedin", true)
+        navigate("/host", { replace: true })
       })
       .catch(err => {
         setError(err)

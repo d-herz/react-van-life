@@ -1,14 +1,16 @@
 import React from 'react';
 import { Navigate, Outlet } from 'react-router-dom';
 
-function AuthRequired(props) {
-  const auth = { token: 123 };
+function AuthRequired() {
 
-  if (!auth.token) {
+  const isLoggedIn = localStorage.getItem("loggedin");
+
+  if (!isLoggedIn) {
     return (
       <Navigate
         to="/login"
         state={{ message: "You must login first" }}
+        replace
       />
     )
   }
