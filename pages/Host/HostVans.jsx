@@ -6,21 +6,9 @@ export function loader() {
   return defer({ hostVans: getHostVans() })
 }
 
-
 function HostVans(props) {
 
   const dataPromise = useLoaderData()
-
-  // const [hostVans, setHostVans] = React.useState([])
-
-  // React.useEffect(() => {
-  //   fetch("/api/host/vans")
-  //     .then(res => res.json())
-  //     .then(data => setHostVans(data.vans))
-
-  // }, [])
-  // console.log(hostVans)
-
 
   function renderHostVans(hostVans) {
 
@@ -44,15 +32,9 @@ function HostVans(props) {
 
     return (
       <div className="host-van-list">
-        {
-          hostVans.length > 0 ? (
-            <section>
-              {hostVansCard}
-            </section>
-          ) : (
-            <h2>Loading...</h2>
-          )
-        }
+          <section>
+            {hostVansCard}
+          </section>
       </div>
     )
   }

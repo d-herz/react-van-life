@@ -6,7 +6,7 @@ export function loader() {
   return defer({ vans: getVans() })
 }
 
-function Vans(props) {
+function Vans() {
   // Pulling in Data with loader function (instead of useEffect and fetch)
   const dataPromise = useLoaderData()
   // console.log(vans)
@@ -18,8 +18,6 @@ function Vans(props) {
 
   // Error states
   const [error, setError] = React.useState(null)
-
-
 
   // Handler function for setting, deleting, or stacking query params:
   function handleFilterChange(key, value) {
