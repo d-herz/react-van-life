@@ -1,5 +1,5 @@
 import React from "react"
-import { useNavigate, useLocation, Form, useActionData } from "react-router-dom";
+import { useNavigate, useNavigation, useLocation, Form, useActionData } from "react-router-dom";
 import { loginUser } from "../api";
 
 
@@ -21,16 +21,13 @@ export async function action({ request }) {
 
 export default function Login() {
  
-  const [status, setStatus] = React.useState("idle")
-
   const data = useActionData()
   const location = useLocation()
   // console.log(location)
   const navigate = useNavigate();
-
+  const {state: status} = useNavigation();
 
   let from = location.state?.from?.pathname || "/host";
-
 
   function handleSubmit() {
     // e.preventDefault()
