@@ -102,9 +102,11 @@ function Vans(props) {
     <div className="van-list-container">
 
       <h1>Explore our van options</h1>
-      <Await resolve={dataPromise.vans}>
-        {renderVans}
-      </Await>
+      <React.Suspense fallback={<h1>Loading vans...</h1> }>
+        <Await resolve={dataPromise.vans}>
+          {renderVans}
+        </Await>
+      </React.Suspense>
     </div>
   )
 }
