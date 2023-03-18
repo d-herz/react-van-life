@@ -10,6 +10,7 @@ export async function action({ request }) {
   
   try { 
     const data = await loginUser({ email, password })
+    localStorage.setItem("loggedin", true)
     console.log(data)
     return data
   } catch(err) {
@@ -23,32 +24,10 @@ export default function Login() {
  
   const data = useActionData()
   const location = useLocation()
-  // console.log(location)
   const navigate = useNavigate();
   const {state: status} = useNavigation();
 
   let from = location.state?.from?.pathname || "/host";
-
-  function handleSubmit() {
-    // e.preventDefault()
-    // setStatus("submitting")
-    // setError(null)
-
-    // navigate(from, { replace: true })
-
-
-    // loginUser(loginFormData)
-    //   .then(data => {
-    //     localStorage.setItem("loggedin", true)
-        // navigate(from, { replace: true })
-    //   })
-    //   .catch(err => {
-    //     setError(err)
-    //   })
-    //   .finally(() => {
-    //     setStatus("idle")
-    //   })
-  }
 
   if (data?.token) {
     navigate(from, { replace: true })
