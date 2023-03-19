@@ -2,7 +2,6 @@ import React from 'react';
 import { NavLink, Link, Outlet, useLoaderData, defer, Await } from 'react-router-dom';
 import { getHostVans } from '../../api';
 
-
 export function loader({ params }) {
   const id = params.id
   return defer({ hostVanDetails: getHostVans(id) })
