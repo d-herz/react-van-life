@@ -2,9 +2,9 @@ function sleep(ms) {
   return new Promise(resolve => setTimeout(() => resolve(), ms))
 }
 
-export async function getVans() {
-  await sleep(500)
-  const res = await fetch("/api/vans")
+export async function getVans(id) {
+  const url = id ? `/api/vans/${id}` : "/api/vans"
+  const res = await fetch(url)
   if (!res.ok) {
     throw {
       message: "Failed to fetch vans",
@@ -14,12 +14,11 @@ export async function getVans() {
   }
   const data = await res.json()
   return data.vans
-
 }
 
-export async function getHostVans() {
-  await sleep(500)
-  const res = await fetch("/api/host/vans")
+export async function getHostVans(id) {
+  const url = id ? `/api/host/vans/${id}` : "/api/host/vans"
+  const res = await fetch(url)
   if (!res.ok) {
     throw {
       message: "Failed to fetch vans",
