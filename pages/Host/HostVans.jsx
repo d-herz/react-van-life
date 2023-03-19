@@ -42,7 +42,7 @@ function HostVans(props) {
   return (
     <section>
       <h1 className='host-vans-title'>Your listed vans</h1>
-      <React.Suspense fallback={<h2>Loading...</h2>}>
+      <React.Suspense fallback={<h2>Loading your vans...</h2>}>
         <Await resolve={dataPromise.hostVans}>
           {renderHostVans}
         </Await>

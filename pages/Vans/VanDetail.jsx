@@ -1,22 +1,23 @@
 import React from 'react';
-import { Link, useParams, useLocation, useLoaderData, defer, Await } from 'react-router-dom';
+import { Link, useLocation, useLoaderData, defer, Await } from 'react-router-dom';
 import { getVans } from '../../api';
 
 
 
 export function loader({ params }) {
-  console.log(params.id)
+  // console.log(params.id)
   const id = params.id
   return defer({ vanDetails: getVans(id) })
 }
 
 function VanDetail() {
   const dataPromise = useLoaderData()
+  console.log(dataPromise)
 
   // const params = useParams()
 
   const location = useLocation()
-  console.log(location)
+  // console.log(location)
 
   // const [vanDetails, setVanDetails] = React.useState([])
 
@@ -43,7 +44,7 @@ function VanDetail() {
         &larr; <span>Back to {type} vans</span>
       </Link>
 
-      <React.Suspense fallback={<h1>Loading van details...</h1>}>
+      <React.Suspense fallback={<h2>Loading van details...</h2>}>
         <Await resolve={dataPromise.vanDetails}>
           {(vanDetails) => {
             return (

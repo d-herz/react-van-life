@@ -36,7 +36,7 @@ function Header() {
           Vans
         </NavLink>
         <Link to="login" className='login-link'>
-          <img src="../assets/images/avatar-icon.png" alt="avatar icon" className='login-icon' />
+          <img src="/assets/images/avatar-icon.png" alt="avatar icon" className='login-icon' />
         </Link>
 
         <button onClick={fakeLogOut}>X</button>
