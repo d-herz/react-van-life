@@ -11,13 +11,14 @@ export function loader({ params }) {
 }
 
 function VanDetail() {
+  const location = useLocation()
   const dataPromise = useLoaderData()
-  console.log(dataPromise)
+  // console.log(dataPromise)
+  
+  const search = location.state?.search || "";
+  const type = location.state?.type || "all";
 
   // const params = useParams()
-
-  const location = useLocation()
-  // console.log(location)
 
   // const [vanDetails, setVanDetails] = React.useState([])
 
@@ -27,10 +28,6 @@ function VanDetail() {
   //     .then(data => setVanDetails(data.vans))
 
   // }, [params.id])
-  // console.log(vanDetails)
-
-  const search = location.state?.search || "";
-  const type = location.state?.type || "all";
 
   return (
     <div className='van-detail-container'>

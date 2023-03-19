@@ -15,6 +15,7 @@ export async function action({ request }) {
     return data
   } catch(err) {
     return {
+      // Returning an error here so the errorElement doesn't get rendered
       error: err.message
     }
   }

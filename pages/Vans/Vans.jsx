@@ -9,15 +9,10 @@ export function loader() {
 function Vans() {
   // Pulling in Data with loader function (instead of useEffect and fetch)
   const dataPromise = useLoaderData()
-  // console.log(vans)
 
   // For using the filters to display certain vans
   const [searchParams, setSearchParams] = useSearchParams()
   const typeFilter = searchParams.get("type")
-  // console.log(typeFilter)
-
-  // Error states
-  const [error, setError] = React.useState(null)
 
   // Handler function for setting, deleting, or stacking query params:
   function handleFilterChange(key, value) {
@@ -31,10 +26,7 @@ function Vans() {
     })
   }
 
-  if (error) {
-    return <h1>There was an error: {error.message}</h1>
-  }
-
+  // Function for <Await> render prop
   function renderVans(vans) {
     const displayedVans = typeFilter
       ? vans.filter(van => van.type === typeFilter)
