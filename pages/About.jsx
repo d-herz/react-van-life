@@ -18,7 +18,7 @@ function About() {
       </div>
       <div className="about-page-cta">
         <h2>
-          Yo ur destination is waiting. <br />Your van is ready.
+          Your destination is waiting. <br />Your van is ready.
         </h2>
         <Link className='link-button' to="/vans">Explore our vans</Link>
       </div>
