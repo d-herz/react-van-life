@@ -33,6 +33,7 @@ createServer({
 
   routes() {
     this.namespace = "api"
+    this.passthrough("https://firestore.googleapis.com/**")
     this.logging = false
 
     this.get("/vans", (schema, request) => {
