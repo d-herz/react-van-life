@@ -1,10 +1,11 @@
 import React from 'react';
 import { NavLink, Link, Outlet, useLoaderData, defer, Await } from 'react-router-dom';
-import { getHostVans } from '../../api';
+// import { getHostVans } from '../../api';
+import { getVan } from '../../api/firebase';
 
 export function loader({ params }) {
   const id = params.id
-  return defer({ hostVanDetails: getHostVans(id) })
+  return defer({ hostVanDetails: getVan(id) })
 }
 
 function HostVanDetails() {

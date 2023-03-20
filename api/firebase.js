@@ -30,7 +30,7 @@ export async function getAllVans() {
     ...doc.data(),
     id: doc.id
   }))
-  console.log(dataArr)
+  // console.log(dataArr)
   return dataArr
 }
 
@@ -38,7 +38,7 @@ export async function getVan(id) {
   const docRef = doc(db, "vans", id)
   const vanSnapshot = await getDoc(docRef)
 
-  console.log(vanSnapshot)
+  // console.log(vanSnapshot)
   return ({
     ...vanSnapshot.data(),
     id: vanSnapshot.id
@@ -52,6 +52,6 @@ export async function getHostVans() {
     ...doc.data(),
     id: doc.id
   }))
-  console.log(dataArr)
+  // console.log(dataArr)
   return dataArr
 }
