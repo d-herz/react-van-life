@@ -2,7 +2,6 @@ import React from "react"
 import { useNavigate, useNavigation, useLocation, Form, useActionData } from "react-router-dom";
 import { loginUser } from "../api";
 
-
 export async function action({ request }) {
   const formData = await request.formData()
   const email = formData.get("email")
