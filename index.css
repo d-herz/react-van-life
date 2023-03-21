@@ -125,7 +125,10 @@ footer {
   background-size: cover;
   min-height: 350px;
   color: white;
-  padding: 45px 23px;
+  padding: 45px 45px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .home-container h1 {
@@ -144,7 +147,7 @@ footer {
   text-decoration: none;
   background-color: #ff8c38;
   border: none;
-  width: 100%;
+  width: 75%;
   margin-top: 27px;
   padding-block: 0.75rem;
   color: white;
