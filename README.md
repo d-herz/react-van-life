@@ -9,13 +9,13 @@ https://van-life-react.netlify.app/
 <h3 align="left">About this project:</h3>
 
 <p align="left">
-Find the perfect van to complement your adventure.
+Find the perfect van to complement your next adventure!
 </p>
 <p align="left">
-VanLife is a conceptual peer-to-peer van sharing marketplace that is a bit like AirBnB on wheels. Renters can easily search for their preferred van type with the dynamic list filtering buttons. The app is complete with a separate Host dashboard for van owners to manage their rental and keep track of income generated.
+VanLife is a conceptual peer-to-peer van sharing marketplace that is a bit like AirBnB on wheels. Renters can easily search for their preferred van type with the dynamic list filtering options. The app is complete with a separate Host dashboard for van owners to manage their rentals while keeping track of reviews and income generated.
 </p>
 <p align="left">
-
+Built entirely with React, ReactDom, React Router, React Icons, Firebase, CSS, and Vite.js
 </p>
 
 
@@ -35,14 +35,14 @@ VanLife is a conceptual peer-to-peer van sharing marketplace that is a bit like 
   <img src="https://github.com/d-herz/react-van-life/blob/main/screenshots/hostreviews.png" alt="screenshot" />
 </p>
 
-<h3 align="left">About this project:</h3>
+<!-- <h3 align="left">About this project:</h3>
 <p align="left">
 <ul>
 <li>Built with React 18 and React Router, and Firebase</li>
 <li>GitHub Pages CI/CD</li>
 <li>Frontend Tooling with Vite.js</li> 
 </ul>
-</p>
+</p> -->
 
 
 
