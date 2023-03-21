@@ -9,10 +9,10 @@ https://van-life-react.netlify.app/
 <h3 align="left">About this project:</h3>
 
 <p align="left">
-VanLife is a  
+Find the perfect van to complement your adventure.
 </p>
 <p align="left">
-The  
+VanLife is a conceptual peer-to-peer van sharing marketplace that is a bit like AirBnB on wheels. Renters can easily search for their preferred van type with the dynamic list filtering buttons. The app is complete with a separate Host dashboard for van owners to manage their rental and keep track of income generated.
 </p>
 <p align="left">
 
