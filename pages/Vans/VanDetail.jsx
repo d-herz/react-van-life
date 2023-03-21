@@ -50,7 +50,7 @@ function VanDetail() {
                 <img src={vanDetails.imageUrl} />
                 <i className={`van-type ${vanDetails.type} selected`}>{vanDetails.type}</i>
                 <h2>{vanDetails.name}</h2>
-                <p className='van-price'>${vanDetails.price}<span>/day</span></p>
+                <p className='van-price'>${vanDetails.price}/day</p>
                 <p>{vanDetails.description}</p>
                 <button className="link-button">Rent this van</button>
               </div>

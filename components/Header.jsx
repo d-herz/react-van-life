@@ -40,7 +40,7 @@ function Header() {
           <img src={Avatar} alt="avatar icon" className='login-icon' />
         </Link>
 
-        <button onClick={fakeLogOut}>X</button>
+        {/* <button onClick={fakeLogOut}>X</button> */}
       </nav>
     </header>
   )
