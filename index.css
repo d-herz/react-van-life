@@ -6,7 +6,7 @@ html,
 body {
   margin: 0;
   padding: 0;
-  background-color: #fff7ed;
+  background-color: #e9ddcf;
   font-family: "Inter", sans-serif;
 }
 
@@ -35,6 +35,8 @@ header {
   display: flex;
   align-items: center;
   padding-block: 10px;
+  border-bottom: 1px solid black;
+  box-shadow: 7px 4px 3px gray;
 }
 
 header .site-logo {
@@ -220,7 +222,7 @@ footer {
   grid-template-columns: 1fr 1fr;
   justify-items: center;
   gap: 34px;
-  margin-top: 57px;
+  margin-top: 35px;
 }
 
 .van-tile a {
@@ -348,7 +350,7 @@ i[class*="van-type-"] {
 .host-nav {
   display: flex;
   justify-content: center;
-  margin-bottom: 30px;
+  margin: 15px 0;
 }
 
 .host-nav a {
