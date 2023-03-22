@@ -8,13 +8,14 @@
 <h3 align="left">About this project:</h3>
 
 <p align="left">
-Find the perfect van to complement your next adventure!
+Built using a mobile-first approach with React, ReactDom, React Router, React Icons, Firebase, CSS, and Vite.js
 </p>
+
 <p align="left">
 VanLife is a conceptual peer-to-peer van sharing marketplace that is a bit like AirBnB on wheels. Renters can easily search for their preferred van type with the dynamic list filtering options. The app is complete with a separate Host dashboard for van owners to manage their rentals while keeping track of reviews and income generated.
 </p>
 <p align="left">
-Built with a mobile-first approach using with React, ReactDom, React Router, React Icons, Firebase, CSS, and Vite.js
+Find the perfect van to complement your next adventure!
 </p>
 
 
