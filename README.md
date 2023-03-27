@@ -8,7 +8,7 @@
 <h3 align="left">About this project:</h3>
 
 <p align="left">
-Built using a mobile-first approach with React, ReactDom, React Router, React Icons, Firebase, CSS, and Vite.js
+Built with a mobile-first approach using React, ReactDom, React Router, React Icons, Firebase, CSS, and Vite.js
 </p>
 
 <p align="left">
