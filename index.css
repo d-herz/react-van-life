@@ -82,11 +82,19 @@ footer {
   color: #aaaaaa;
   height: 74px;
   display: flex;
+  flex-direction: column;
   flex-shrink: 0;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   margin-top: auto;
   font-weight: 500;
+  padding: 1rem;
+}
+footer p{
+  margin: 0;
+}
+footer h5{
+  margin: 0;
 }
 
 .link-button {
