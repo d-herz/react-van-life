@@ -8,10 +8,9 @@ export function loader() {
 }
 
 function Vans() {
-  // Pulling in Data with loader function (instead of useEffect and fetch)
   const dataPromise = useLoaderData()
 
-  // For using the filters to display certain vans
+  // Van display filters 
   const [searchParams, setSearchParams] = useSearchParams()
   const typeFilter = searchParams.get("type")
 

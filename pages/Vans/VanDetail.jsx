@@ -33,7 +33,6 @@ function VanDetail() {
   return (
     <div className='van-detail-container'>
 
-
       <Link
         to={`..${search}`}
         relative="path"
